@@ -1,22 +1,21 @@
 export function printHearts(count) {
   console.log(`출력 :`);
   const heart = "♡";
-  // 입력 받은 숫자가 0 이상
+  const countHearts = Math.abs(count);
   if (count >= 0) {
-    for (let i = 0; i < Math.abs(count); i++) {
-      for (let j = i; j >= 0; j--) {
-        process.stdout.write(heart);
-      }
-      console.log();
+    for (let i = 0; i <= countHearts; i++) {
+      console.log(heart.repeat(i));
     }
   }
-  // 입력 받은 숫자가 0 미만
   if (count < 0) {
-    for (let i = 0; i < Math.abs(count); i++) {
-      for (let j = i; j < Math.abs(count); j++) {
-        process.stdout.write(heart);
-      }
-      console.log();
+    for (let i = countHearts; i >= 0; i--) {
+      console.log(heart.repeat(i));
     }
   }
+}
+
+export function inputGuide() {
+  console.log();
+  console.log(`하트의 갯수를 입력해주세요.`);
+  console.log(`종료를 원하시면 X를 입력해주세요.`);
 }
