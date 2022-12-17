@@ -1,40 +1,26 @@
-const readline = require("readline");
+import { printHearts } from "./functions/printHearts.js";
+import { printHearts2 } from "./functions/printHearts2.js";
+import { printHearts3 } from "./functions/printHearts3.js";
+import readline from "readline";
 
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
 });
 
-console.log("count를 입력해주세요.");
-
+console.log(`하트의 갯수를 입력해주세요.`);
 rl.on("line", (line) => {
+  console.log(`입력: ${line}`);
+  console.time("printHeart");
   printHearts(line);
+  console.timeEnd("printHeart");
+
+  console.time("printHeart2");
+  printHearts2(line);
+  console.timeEnd("printHeart2");
+
+  console.time("printHeart3");
+  printHearts3(line);
+  console.timeEnd("printHeart3");
   rl.close();
 });
-
-rl.on("close", () => {
-  process.exit();
-});
-
-const heart = "♡";
-
-function printHearts(count) {
-  console.log(`입력 : printHeart(${count})`);
-  console.log(`출력 :`);
-  if (count > 0) {
-    for (let i = 0; i < Math.abs(count); i++) {
-      for (let j = i; j >= 0; j--) {
-        process.stdout.write(heart);
-      }
-      console.log();
-    }
-  }
-  if (count < 0) {
-    for (let i = 0; i < Math.abs(count); i++) {
-      for (let j = i; j < Math.abs(count); j++) {
-        process.stdout.write(heart);
-      }
-      console.log();
-    }
-  }
-}
