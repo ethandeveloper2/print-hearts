@@ -16,6 +16,6 @@ node index.js
 
 ## 결과물
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a4bcfebb-03d6-42ac-ae06-9a3722a299cd/Untitled.png)
+![10개 출력](https://user-images.githubusercontent.com/102854465/208281029-a055e466-9e66-4304-820d-aae27934f4f2.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9d8ef8c6-50cf-4469-a87b-2bb4e911057d/Untitled.png)
+![image](https://user-images.githubusercontent.com/102854465/208281266-9dfc4ddd-5af4-4377-af2e-a8b7c145e892.png)
