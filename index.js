@@ -8,17 +8,17 @@ const inputInterface = readline.createInterface({
 
 inputGuide();
 inputInterface.on("line", (count) => {
-  // 입력값이 X가 아니며, 숫자일 때
+  // 입력값이 'x'가 아니며, 숫자일 때
   if (count != "x" && Number(count)) {
     console.log(`입력: ${count}`);
     printHearts(count);
     inputGuide();
   }
-  // 입력값이 숫자가 아닐 때
-  if (!Number(count)) {
+  // 입력값이 숫자 또는 'x'가 아닐 때
+  if (!Number(count) && count != "x") {
     console.log("입력값을 올바르게 입력해주세요.");
   }
-  // 입력값이 x일 때
+  // 입력값이 'x'일 때
   if (count == "x") {
     inputInterface.close();
   }
