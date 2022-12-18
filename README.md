@@ -14,6 +14,14 @@ javascript , node.js
 node index.js
 ```
 
+## 개발 시 고려 사항
+
+printHeart 메서드 대한 성능 테스트 ( count 100 기준 실행 완료 시간 )
+
+1. printHearts.js : 기존 코드 (396ms)
+2. printHearts2.js : 추가 변수 선언 (스코프 체인 고려) (countHearts) (326ms)
+3. printHearts3.js : 이중 for문 제거, repeat() 메서드 사용 (35ms)
+
 ## 결과물
 
 ![10개 출력](https://user-images.githubusercontent.com/102854465/208281029-a055e466-9e66-4304-820d-aae27934f4f2.png)
