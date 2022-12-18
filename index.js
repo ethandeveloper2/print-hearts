@@ -1,6 +1,5 @@
 import { inputGuide, printHearts } from "./functions/printHearts.js";
 import readline from "readline";
-import { printHearts2 } from "./functions/printHearts-return.js";
 
 const inputInterface = readline.createInterface({
   input: process.stdin,
@@ -11,7 +10,7 @@ inputGuide();
 inputInterface.on("line", (count) => {
   // 입력값이 'x'가 아니며, 숫자일 때
   if (count != "x" && Number(count)) {
-    const result = printHearts2(count);
+    const result = printHearts(count);
     console.log(`입력: ${count}`);
     console.log(`출력 :`);
     console.log(result);
