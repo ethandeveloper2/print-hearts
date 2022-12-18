@@ -1,17 +1,26 @@
 export function printHearts(count) {
-  console.log(`출력 :`);
   const heart = "♡";
   const countHearts = Math.abs(count);
+  let result = "";
   if (count >= 0) {
-    for (let i = 0; i <= countHearts; i++) {
-      console.log(heart.repeat(i));
+    for (let i = 1; i <= countHearts; i++) {
+      if (i == countHearts) {
+        result = result + heart.repeat(i);
+      } else {
+        result = result + heart.repeat(i) + "\n";
+      }
     }
   }
   if (count < 0) {
-    for (let i = countHearts; i >= 0; i--) {
-      console.log(heart.repeat(i));
+    for (let i = countHearts; i >= 1; i--) {
+      if (i == 1) {
+        result = result + heart.repeat(i);
+      } else {
+        result = result + heart.repeat(i) + "\n";
+      }
     }
   }
+  return result;
 }
 
 export function inputGuide() {
