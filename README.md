@@ -18,9 +18,10 @@ node index.js
 
 printHeart 메서드 대한 성능 테스트 ( count 100 기준 실행 완료 시간 )
 
-1. printHearts.js : 기존 코드 (396ms)
-2. printHearts2.js : 추가 변수 선언 (스코프 체인 고려) (countHearts) (326ms)
-3. printHearts3.js : 이중 for문 제거, repeat() 메서드 사용 (35ms)
+1. 처음 작성했던 코드 (396ms)
+2. 추가 변수 선언 (스코프 체인 고려) (countHearts) (326ms)
+3. 이중 for문 제거, repeat() 메서드 사용 (35ms)
+4. string 형태로 result값을 return하여 출력 (20ms)
 
 ## 결과물
 
